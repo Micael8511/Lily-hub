@@ -1,0 +1,118 @@
+local LilyHub = game:GetService("Workspace"):WaitForChild("LilyHub")
+local UserInputService = game:GetService("UserInputService")
+local RunService = game:GetService("RunService")
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "LilyHub"
+ScreenGui.Parent = game.Players.LocalPlayer.PlayerGui
+
+local function pedirKey()
+    local frame = Instance.new("Frame")
+    frame.Size = UDim2.new(0, 200, 0, 50)
+    frame.Position = UDim2.new(0, 100, 0, 100)
+    frame.BackgroundTransparency = 0
+    frame.BackgroundColor3 = Color3.new(1, 1, 1)
+    frame.Parent = ScreenGui
+
+    local texto = Instance.new("TextLabel")
+    texto.Size = UDim2.new(0, 200, 0, 50)
+    texto.Position = UDim2.new(0, 0, 0, 0)
+    texto.BackgroundTransparency = 1
+    texto.Text = "Digite sua chave"
+    texto.FontSize = Enum.FontSize.Size14
+    texto.Parent = frame
+
+    local input = Instance.new("TextBox")
+    input.Size = UDim2.new(0, 150, 0, 20)
+    input.Position = UDim2.new(0, 25, 0, 15)
+    input.BackgroundTransparency = 0
+    input.BackgroundColor3 = Color3.new(1, 1, 1)
+    input.Parent = frame
+
+    local botao = Instance.new("TextButton")
+    botao.Size = UDim2.new(0, 50, 0, 20)
+    botao.Position = UDim2.new(0, 175, 0, 15)
+    botao.BackgroundTransparency = 0
+    botao.BackgroundColor3 = Color3.new(1, 0, 0)
+    botao.Text = "Entrar"
+    botao.FontSize = Enum.FontSize.Size14
+    botao.Parent = frame
+
+    botao.MouseButton1Down:Connect(function()
+        local key = input.Text
+        if key == "sua_chave_aqui" then
+            frame:Destroy()
+            RunService.StarterGui:SetCore("SendNotification", {
+                Title = "Lily Hub",
+                Text = "Chave válida",
+                Duration = 5,
+                Image = "rbxassetid://1318518679",
+            })
+        else
+            RunService.StarterGui:SetCore("SendNotification", {
+                Title = "Lily Hub",
+                Text = "Chave inválida",
+                Duration = 5,
+                Image = "rbxassetid://1318518679",
+            })
+        end
+    end)
+end
+
+local function coletarMoney()
+    local Brahma = game:GetService("Workspace"):WaitForChild("Brahma")
+    local dinheiro = Brahma:FindFirstChild("dinheiro")
+    if dinheiro then
+        dinheiro.Value = dinheiro.Value + 1000
+        RunService.StarterGui:SetCore("SendNotification", {
+            Title = "Lily Hub",
+            Text = "Dinheiro coletado com sucesso!",
+            Duration = 5,
+            Image = "rbxassetid://1318518679",
+        })
+    else
+        RunService.StarterGui:SetCore("SendNotification", {
+            Title = "Lily Hub",
+            Text = "Não há dinheiro para coletar",
+            Duration = 5,
+            Image = "rbxassetid://1318518679",
+        })
+    end
+end
+
+local function eventoPopcorn()
+    local Popcorn = game:GetService("Workspace"):WaitForChild("Popcorn")
+    local jogador = game.Players.LocalPlayer
+    local posicao = Popcorn.HumanoidRootPart.Position
+    jogador.Character.HumanoidRootPart.CFrame = posicao
+    RunService.StarterGui:SetCore("SendNotification", {
+        Title = "Lily Hub",
+        Text = "Você foi teleportado para o evento de Popcorn",
+        Duration = 5,
+        Image = "rbxassetid://1318518679",
+    })
+end
+
+local function eventoDoce()
+    local Doce = game:GetService("Workspace"):WaitForChild("Doce")
+    local jogador = game.Players.LocalPlayer
+    local posicao = Doce.HumanoidRootPart.Position
+    jogador.Character.HumanoidRootPart.CFrame = posicao
+    RunService.StarterGui:SetCore("SendNotification", {
+        Title = "Lily Hub",
+        Text = "Você foi teleportado para o evento de Doce",
+        Duration = 5,
+        Image = "rbxassetid://1318518679",
+    })
+end
+
+pedirKey()
+
+UserInputService.InputBegan:Connect(function(input)
+    if input.KeyCode == Enum.KeyCode.E then
+        coletarMoney()
+    elseif input.KeyCode == Enum.KeyCode.P then
+        eventoPopcorn()
+    elseif input.KeyCode == Enum.KeyCode.D then
+        eventoDoce()
+    end
+end)
