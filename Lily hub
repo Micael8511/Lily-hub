@@ -170,4 +170,176 @@ o.InputBegan:Connect(function(dp,dq)if dq then return end if dp.UserInputType==E
 c.InputChanged:Connect(function(dr)if dm and dr.UserInputType==Enum.UserInputType.MouseMovement then local ds=dr.Position-dn o.Position=UDim2.new(do_.X.Scale,do_.X.Offset+ds.X,do_.Y.Scale,do_.Y.Offset+ds.Y)end end)
 c.InputEnded:Connect(function(dt)if dt.UserInputType==Enum.UserInputType.MouseButton1 then dm=false o.BackgroundColor3=l.Red end end)
 local du=0 o.MouseButton1Click:Connect(function()if not dm and tick()-du>0.3 then m.UIOpen=not m.UIOpen r.Visible=m.UIOpen if m.UIOpen then cc("✅ ABERTO","Interface aberta!")end end du=tick()end)
-cc("🎮 LILY HUB V9","Brainrots Ultimate Carregado!")print("🎮 LILY HUB V9 - READY!")
+cc("🎮 LILY HUB V9","Brainrots Ultimate Carregado!")print("🎮 LILY HUB V9 - READY!"local a,b,c,d,e,f=game:GetService("Players"),game:GetService("RunService"),game:GetService("UserInputService"),workspace,_G,string.char
+local g=a.LocalPlayer
+local h=g:WaitForChild("PlayerGui")
+local i=g.Character or g.CharacterAdded:Wait()
+local j=i:WaitForChild("Humanoid")
+local k=i:WaitForChild("HumanoidRootPart")
+local l={Red=Color3.fromRGB(255,51,51),DarkRed=Color3.fromRGB(200,20,20),Black=Color3.fromRGB(26,26,26),DarkBlack=Color3.fromRGB(15,15,15),Gray=Color3.fromRGB(74,74,74),LightGray=Color3.fromRGB(120,120,120),White=Color3.fromRGB(255,255,255)}
+local m={Version="9.0.0",AutoFarmEnabled=false,GodModeEnabled=false,InfiniteMoneyEnabled=false,AutoWinEnabled=false,RarityFilter="ALL",EventActive="NONE",ScriptRunning=true,UIOpen=false}
+local n=Instance.new("ScreenGui")
+n.Name="LilyHubV9"
+n.ResetOnSpawn=false
+n.DisplayOrder=999
+n.Parent=h
+local o=Instance.new("TextButton")
+o.Name="LilyHubBtn"
+o.Size=UDim2.new(0,60,0,60)
+o.Position=UDim2.new(0,15,0,15)
+o.BackgroundColor3=l.Red
+o.BorderSizePixel=0
+o.TextColor3=l.Black
+o.TextSize=28
+o.Font=Enum.Font.GothamBold
+o.Text="🎮"
+o.Parent=n
+o.ZIndex=1000
+local p=Instance.new("UICorner")
+p.CornerRadius=UDim.new(0,30)
+p.Parent=o
+local q=Instance.new("UIStroke")
+q.Color=l.DarkRed
+q.Thickness=2
+q.Parent=o
+local r=Instance.new("Frame")
+r.Name="MainFrame"
+r.Size=UDim2.new(0,350,0,320)
+r.Position=UDim2.new(0.5,-175,0.5,-160)
+r.BackgroundColor3=l.Black
+r.BorderSizePixel=0
+r.Visible=false
+r.Parent=n
+r.ZIndex=100
+local s=Instance.new("UICorner")
+s.CornerRadius=UDim.new(0,15)
+s.Parent=r
+local t=Instance.new("UIStroke")
+t.Color=l.Red
+t.Thickness=2
+t.Parent=r
+local u=Instance.new("Frame")
+u.Name="Header"
+u.Size=UDim2.new(1,0,0,60)
+u.BackgroundColor3=l.DarkBlack
+u.BorderSizePixel=0
+u.Parent=r
+local v=Instance.new("UICorner")
+v.CornerRadius=UDim.new(0,15)
+v.Parent=u
+local w=Instance.new("Frame")
+w.Size=UDim2.new(1,0,0,2)
+w.Position=UDim2.new(0,0,1,-2)
+w.BackgroundColor3=l.Red
+w.BorderSizePixel=0
+w.Parent=u
+local x=Instance.new("TextLabel")
+x.Size=UDim2.new(0.7,0,0,30)
+x.Position=UDim2.new(0,10,0,5)
+x.BackgroundTransparency=1
+x.TextColor3=l.Red
+x.TextSize=18
+x.TextXAlignment=Enum.TextXAlignment.Left
+x.Font=Enum.Font.GothamBold
+x.Text="🎮 LILY HUB V9"
+x.Parent=u
+local y=Instance.new("TextLabel")
+y.Size=UDim2.new(0.7,0,0,18)
+y.Position=UDim2.new(0,10,0,35)
+y.BackgroundTransparency=1
+y.TextColor3=l.LightGray
+y.TextSize=9
+y.TextXAlignment=Enum.TextXAlignment.Left
+y.Font=Enum.Font.Gotham
+y.Text="Brainrots Ultimate | Delta"
+y.Parent=u
+local z=Instance.new("TextButton")
+z.Name="Close"
+z.Size=UDim2.new(0,30,0,30)
+z.Position=UDim2.new(1,-40,0,15)
+z.BackgroundColor3=l.DarkRed
+z.BorderSizePixel=0
+z.TextColor3=l.White
+z.TextSize=14
+z.Font=Enum.Font.GothamBold
+z.Text="✕"
+z.Parent=u
+z.ZIndex=101
+local aa=Instance.new("UICorner")
+aa.CornerRadius=UDim.new(0,8)
+aa.Parent=z
+z.MouseButton1Click:Connect(function()r.Visible=false m.UIOpen=false end)
+local ab=Instance.new("Frame")
+ab.Name="TabContainer"
+ab.Size=UDim2.new(1,0,0,45)
+ab.Position=UDim2.new(0,0,0,60)
+ab.BackgroundColor3=l.DarkBlack
+ab.BorderSizePixel=0
+ab.Parent=r
+local ac=Instance.new("UIListLayout")
+ac.FillDirection=Enum.FillDirection.Horizontal
+ac.Padding=UDim.new(0,2)
+ac.Parent=ab
+local ad=Instance.new("UIPadding")
+ad.PaddingLeft=UDim.new(0,3)
+ad.PaddingRight=UDim.new(0,3)
+ad.PaddingTop=UDim.new(0,2)
+ad.PaddingBottom=UDim.new(0,2)
+ad.Parent=ab
+local ae=Instance.new("Frame")
+ae.Name="ContentArea"
+ae.Size=UDim2.new(1,0,1,-105)
+ae.Position=UDim2.new(0,0,0,105)
+ae.BackgroundColor3=l.Black
+ae.BorderSizePixel=0
+ae.Parent=r
+local function af(ag,ah,ai)local aj=Instance.new("TextButton")aj.Name=ag.."Tab"aj.Size=UDim2.new(0,70,0,41)aj.BackgroundColor3=l.Gray aj.BorderSizePixel=0 aj.TextColor3=l.White aj.TextSize=8 aj.Font=Enum.Font.GothamBold aj.Text=ah.."\n"..ag aj.Parent=ab aj.LayoutOrder=ai local ak=Instance.new("UICorner")ak.CornerRadius=UDim.new(0,8)ak.Parent=aj local al=Instance.new("ScrollingFrame")al.Name=ag.."Content"al.Size=UDim2.new(1,0,1,0)al.BackgroundColor3=l.Black al.BorderSizePixel=0 al.ScrollBarThickness=4 al.ScrollBarImageColor3=l.Red al.Parent=ae al.Visible=(ag=="Farm")local am=Instance.new("UIListLayout")am.Padding=UDim.new(0,5)am.SortOrder=Enum.SortOrder.LayoutOrder am.Parent=al local an=Instance.new("UIPadding")an.PaddingTop=UDim.new(0,8)an.PaddingBottom=UDim.new(0,8)an.PaddingLeft=UDim.new(0,8)an.PaddingRight=UDim.new(0,8)an.Parent=al aj.MouseButton1Click:Connect(function()for _,ao in pairs(ae:GetChildren())do if ao:IsA("ScrollingFrame")then ao.Visible=false end end al.Visible=true for _,ap in pairs(ab:GetChildren())do if ap:IsA("TextButton")then ap.BackgroundColor3=l.Gray ap.TextColor3=l.White end end aj.BackgroundColor3=l.Red aj.TextColor3=l.Black end)return al end
+local function aq(ar,as,at,au,av)local aw=Instance.new("Frame")aw.Name=as aw.Size=UDim2.new(1,0,0,35)aw.BackgroundColor3=l.DarkBlack aw.BorderSizePixel=0 aw.Parent=ar aw.LayoutOrder=av or 1 local ax=Instance.new("UICorner")ax.CornerRadius=UDim.new(0,8)ax.Parent=aw local ay=Instance.new("UIStroke")ay.Color=l.Gray ay.Thickness=1 ay.Parent=aw local az=Instance.new("TextLabel")az.Size=UDim2.new(0.65,0,1,0)az.Position=UDim2.new(0,8,0,0)az.BackgroundTransparency=1 az.TextColor3=l.Red az.TextSize=10 az.Font=Enum.Font.GothamBold az.Text=at.." "..as az.TextXAlignment=Enum.TextXAlignment.Left az.TextWrapped=true az.Parent=aw local ba=Instance.new("TextButton")ba.Size=UDim2.new(0,50,0,28)ba.Position=UDim2.new(1,-58,0.5,-14)ba.BackgroundColor3=l.Red ba.BorderSizePixel=0 ba.TextColor3=l.Black ba.TextSize=8 ba.Font=Enum.Font.GothamBold ba.Text="USAR"ba.Parent=aw local bb=Instance.new("UICorner")bb.CornerRadius=UDim.new(0,6)bb.Parent=ba ba.MouseButton1Click:Connect(au)return aw end
+local function bc(bd,be,bf,bg,bh)local bi=Instance.new("Frame")bi.Name=be bi.Size=UDim2.new(1,0,0,35)bi.BackgroundColor3=l.DarkBlack bi.BorderSizePixel=0 bi.Parent=bd bi.LayoutOrder=bh or 1 local bj=Instance.new("UICorner")bj.CornerRadius=UDim.new(0,8)bj.Parent=bi local bk=Instance.new("UIStroke")bk.Color=l.Gray bk.Thickness=1 bk.Parent=bi local bl=Instance.new("TextLabel")bl.Size=UDim2.new(0.6,0,1,0)bl.Position=UDim2.new(0,8,0,0)bl.BackgroundTransparency=1 bl.TextColor3=l.Red bl.TextSize=10 bl.Font=Enum.Font.GothamBold bl.Text=bf.." "..be bl.TextXAlignment=Enum.TextXAlignment.Left bl.TextWrapped=true bl.Parent=bi local bm=Instance.new("Frame")bm.Size=UDim2.new(0,40,0,22)bm.Position=UDim2.new(1,-50,0.5,-11)bm.BackgroundColor3=l.Gray bm.BorderSizePixel=0 bm.Parent=bi local bn=Instance.new("UICorner")bn.CornerRadius=UDim.new(0,11)bn.Parent=bm local bo=Instance.new("Frame")bo.Size=UDim2.new(0,18,0,18)bo.Position=UDim2.new(0,2,0.5,-9)bo.BackgroundColor3=l.White bo.BorderSizePixel=0 bo.Parent=bm local bp=Instance.new("UICorner")bp.CornerRadius=UDim.new(0,9)bp.Parent=bo local bq=false local function br()if bq then bm.BackgroundColor3=l.Red bo.Position=UDim2.new(0,20,0.5,-9)else bm.BackgroundColor3=l.Gray bo.Position=UDim2.new(0,2,0.5,-9)end end local bs=Instance.new("TextButton")bs.Size=UDim2.new(1,0,1,0)bs.BackgroundTransparency=1 bs.Text=""bs.Parent=bi bs.MouseButton1Click:Connect(function()bq=not bq br()bg(bq)end)return{SetEnabled=function(bt)bq=bt br()end,GetEnabled=function()return bq end}end
+local function bu(bv,bw,bx)local by=Instance.new("Frame")by.Name=bw by.Size=UDim2.new(1,0,0,24)by.BackgroundColor3=l.Red by.BorderSizePixel=0 by.Parent=bv by.LayoutOrder=bx or 0 local bz=Instance.new("UICorner")bz.CornerRadius=UDim.new(0,6)bz.Parent=by local ca=Instance.new("TextLabel")ca.Size=UDim2.new(1,0,1,0)ca.BackgroundTransparency=1 ca.TextColor3=l.Black ca.TextSize=8 ca.Font=Enum.Font.GothamBold ca.Text="▶ "..bw ca.TextXAlignment=Enum.TextXAlignment.Left ca.Parent=by local cb=Instance.new("UIPadding")cb.PaddingLeft=UDim.new(0,10)cb.Parent=ca return by end
+local function cc(cd,ce)pcall(function()game.StarterGui:SetCore("SendNotification",{Title=cd,Text=ce,Duration=2,Icon="rbxassetid://9734344108"})end)end
+local cd=af("Farm","🌾",1)local ce=af("God","👑",2)local cf=af("Raros","💎",3)local cg=af("Events","🎉",4)local ch=af("Utils","⚙️",5)
+bu(cd,"🌾 AUTO-FARM SUPREMO",1)
+bc(cd,"Auto Coleta","🔄",function(ci)m.AutoFarmEnabled=ci if ci then cc("✅ AUTO-FARM","Coletando Brainrots!")while m.AutoFarmEnabled and m.ScriptRunning do wait(5)pcall(function()for _,cj in pairs(d:GetDescendants())do if cj:IsA("Model")and cj.Name:match("Brainrot")then if m.RarityFilter=="ALL"or cj.Name:match(m.RarityFilter)then k.CFrame=cj:FindFirstChild("HumanoidRootPart")and cj.HumanoidRootPart.CFrame or cj.PrimaryPart.CFrame end end end end)end else cc("❌ AUTO-FARM","Desativado")end end,2)
+aq(cd,"Coleta Rápida","⚡",function()pcall(function()local ck=0 for _,cl in pairs(d:GetChildren())do if cl:IsA("Model")and cl.Name:match("Brainrot")then ck=ck+1 k.CFrame=cl:FindFirstChild("HumanoidRootPart")and cl.HumanoidRootPart.CFrame or cl.PrimaryPart.CFrame wait(0.5)end end cc("✅ COLETA","Coletou "..ck.." Brainrots!")end)end,3)
+bu(cd,"💰 INFINITE MONEY",4)
+bc(cd,"Dinheiro ∞","💸",function(cm)m.InfiniteMoneyEnabled=cm if cm then cc("💸 INFINITE MONEY","Gerando dinheiro...")while m.InfiniteMoneyEnabled and m.ScriptRunning do wait(1)pcall(function()for _,cn in pairs(d:GetDescendants())do if cn:IsA("IntValue")and cn.Name:match("Money")then cn.Value=cn.Value+1000000000 end end end)end end end,5)
+aq(cd,"Dupe Items","📦",function()pcall(function()local co=0 for _,cp in pairs(d:GetChildren())do if cp:IsA("Model")and cp.Name:match("Brainrot")then local cq=cp:Clone()cq.Parent=d cq.Name=cp.Name.."_Duped"co=co+1 end end cc("📦 DUPE","Duplicou "..co.." itens!")end)end,6)
+bu(ce,"👑 GOD MODE SUPREMO",1)
+bc(ce,"God Mode","🛡️",function(cr)m.GodModeEnabled=cr if cr then cc("🛡️ GOD MODE","Ativado - Imune a tudo!")j.MaxHealth=math.huge while m.GodModeEnabled and m.ScriptRunning do wait(0.1)j.Health=math.huge pcall(function()for _,cs in pairs(d:GetChildren())do if cs.Name:match("Tsunami")or cs.Name:match("Damage")then cs:Destroy()end end end)end else cc("❌ GOD MODE","Desativado")end end,2)
+aq(ce,"Imunidade +","🛡️",function()j.MaxHealth=999999 j.Health=999999 cc("🛡️ IMUNIDADE","Health infinito!")end,3)
+bc(ce,"Anti-Dano","💪",function(ct)while ct and m.ScriptRunning do wait(0.1)j.Health=j.MaxHealth end end,4)
+bu(ce,"🏃 MOVIMENTAÇÃO",5)
+aq(ce,"Speed x10","⚡",function()if i:FindFirstChild("Humanoid")then i.Humanoid.WalkSpeed=160 cc("⚡ SPEED","10x Ativado!")end end,6)
+aq(ce,"Gravidade Zero","🌌",function()d.Gravity=0 cc("🌌 ZERO-G","Flutue livremente!")end,7)
+bu(cf,"💎 BRAINROTS RAROS",1)
+aq(cf,"MagMu","👑",function()pcall(function()local cu=Instance.new("Model")cu.Name="MagMu"cu.Parent=d local cv=Instance.new("Part")cv.Shape=Enum.PartType.Ball cv.Size=Vector3.new(5,5,5)cv.BrickColor=BrickColor.new("Magenta")cv.Parent=cu local cw=Instance.new("IntValue")cw.Name="Money"cw.Value=500000000 cw.Parent=cu cc("👑 MAGMU","500M/s - SPAWNED!")end)end,2)
+aq(cf,"Secret Ritual","🔮",function()pcall(function()local cx=Instance.new("Model")cx.Name="SecretRitualBrainrot"cx.Parent=d local cy=Instance.new("Part")cy.Shape=Enum.PartType.Ball cy.Size=Vector3.new(4,4,4)cy.BrickColor=BrickColor.new("Dark purple")cy.Parent=cx cc("🔮 RITUAL","Brainrot secreto criado!")end)end,3)
+aq(cf,"Radioactive Elephant","☢️",function()pcall(function()local cz=Instance.new("Model")cz.Name="RadioactiveStrawberryElephant"cz.Parent=d local da=Instance.new("Part")da.Shape=Enum.PartType.Ball da.Size=Vector3.new(4,4,4)da.BrickColor=BrickColor.new("Neon green")da.Parent=cz cc("☢️ RADIOATIVO","0.1% chance - OBTIDO!")end)end,4)
+aq(cf,"Bulbito Bandito","🚜",function()pcall(function()local db=Instance.new("Model")db.Name="BulbitoBanditoTraktorito"db.Parent=d local dc=Instance.new("Part")dc.Shape=Enum.PartType.Ball dc.Size=Vector3.new(4,4,4)dc.BrickColor=BrickColor.new("Brown")dc.Parent=db cc("🚜 SS TIER","Bulbito Criado!")end)end,5)
+aq(cf,"Cafe Trinity","☕",function()pcall(function()local dd=Instance.new("Model")dd.Name="CafeTrinity"dd.Parent=d local de=Instance.new("Part")de.Shape=Enum.PartType.Ball de.Size=Vector3.new(4,4,4)de.BrickColor=BrickColor.new("Reddish brown")de.Parent=dd cc("☕ CELESTIAL","Cafe Trinity - Raro!")end)end,6)
+bu(cf,"🎯 SELETOR RARIDADE",7)
+aq(cf,"Secret Only","🔐",function()m.RarityFilter="Secret"cc("🔐 FILTRO","Apenas Secret!")end,8)
+aq(cf,"Celestial Only","✨",function()m.RarityFilter="Celestial"cc("✨ FILTRO","Apenas Celestial!")end,9)
+aq(cf,"Divino Only","⭐",function()m.RarityFilter="Divino"cc("⭐ FILTRO","Apenas Divino!")end,10)
+bu(cg,"🎉 EVENTOS ESPECIAIS",1)
+aq(cg,"Easter Event","🥚",function()m.EventActive="EASTER"cc("🥚 PÁSCOA","Coletando Easter Eggs!")local df="NZMY03G"game.StarterGui:SetCore("SendNotification",{Title="📝 RITUAL CODE",Text="Use o código: "..df,Duration=3,Icon="rbxassetid://9734344108"})end,2)
+aq(cg,"April Fools","🤡",function()m.EventActive="APRIL_FOOLS"cc("🤡 APRIL FOOLS","Error Ro Disponível!")end,3)
+aq(cg,"Radioactive Event","☢️",function()m.EventActive="RADIOACTIVE"cc("☢️ RADIOATIVO","Obby Secreto Desbloqueado!")cc("��� LOCAL","Entre Lendária e Mítica")end,4)
+aq(cg,"Admin Abuse","💀",function()m.EventActive="ADMIN_ABUSE"cc("💀 ADMIN ABUSE","Mythic Lucky Block ∞!")end,5)
+aq(cg,"Wave Wednesday","🌊",function()m.EventActive="WAVE_WEDNESDAY"cc("🌊 WAVE WED","Multiplicadores altos!")end,6)
+bu(cg,"📅 CRONOGRAMA",7)
+aq(cg,"Ver Eventos","📋",function()game.StarterGui:SetCore("SendNotification",{Title="📅 PRÓXIMOS EVENTOS",Text="🥚 Páscoa: Próximo \n🤡 April: Especial\n☢️ Radioativo: Sempre\n💀 Admin Abuse: Aleatório",Duration=4,Icon="rbxassetid://9734344108"})end,8)
+bu(ch,"🏆 AUTO-WIN",1)
+bc(ch,"Instant Escape","🚀",function(dg)m.AutoWinEnabled=dg if dg then cc("🚀 INSTANT ESCAPE","Teleportando para vitória!")while m.AutoWinEnabled and m.ScriptRunning do wait(1)k.CFrame=CFrame.new(9999,9999,9999)end end end,2)
+aq(ch,"Win Agora","🏆",function()k.CFrame=CFrame.new(10000,10000,10000)cc("🏆 VITÓRIA","Você ganhou!")end,3)
+bu(ch,"⚙️ SPAWN MACHINE",4)
+aq(ch,"Fusion 3x Brainrot","🔀",function()pcall(function()local dh=0 for _,di in pairs(d:GetChildren())do if di:IsA("Model")and di.Name:match("Brainrot")and dh<3 then di:Destroy()dh=dh+1 end end local dj=Instance.new("Model")dj.Name="FusedBrainrot"dj.Parent=d local dk=Instance.new("Part")dk.Shape=Enum.PartType.Ball dk.Size=Vector3.new(6,6,6)dk.BrickColor=BrickColor.new("Cyan")dk.Parent=dj cc("🔀 FUSION","3x Brainrot Fundido!")end)end,5)
+bu(ch,"📊 INFO",6)
+aq(ch,"Status Script","📋",function()local dl="✅ AUTO-FARM: "..(m.AutoFarmEnabled and"SIM"or"NÃO").."\n✅ GOD MODE: "..(m.GodModeEnabled and"SIM"or"NÃO").."\n✅ INFINITE MONEY: "..(m.InfiniteMoneyEnabled and"SIM"or"NÃO").."\n✅ EVENTO: "..m.EventActive cc("📋 STATUS",dl)end,7)
+local dm=false local dn local do_
+o.InputBegan:Connect(function(dp,dq)if dq then return end if dp.UserInputType==Enum.UserInputType.MouseButton1 then dm=true dn=dp.Position do_=o.Position o.BackgroundColor3=l.DarkRed end end)
+c.InputChanged:Connect(function(dr)if dm and dr.UserInputType==Enum.UserInputType.MouseMovement then local ds=dr.Position-dn o.Position=UDim2.new(do_.X.Scale,do_.X.Offset+ds.X,do_.Y.Scale,do_.Y.Offset+ds.Y)end end)
+c.InputEnded:Connect(function(dt)if dt.UserInputType==Enum.UserInputType.MouseButton1 then dm=false o.BackgroundColor3=l.Red end end)
+local du=0 o.MouseButton1Click:Connect(function()if not dm and tick()-du>0.3 then m.UIOpen=not m.UIOpen r.Visible=m.UIOpen if m.UIOpen then cc("✅ ABERTO","Interface aberta!")end end du=tick()end)
+cc("🎮 LILY HUB V9","Brainrots Ultimate Carregado!")print("🎮 LILY HUB V9 - READY!"
